@@ -5,6 +5,8 @@
  *      Author: knad0001
  */
 
+/* wooohhooo */
+
 #ifndef Automat_H_
 #define Automat_H_
 
