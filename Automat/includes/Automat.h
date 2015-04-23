@@ -27,6 +27,8 @@ public:
 	void setStateNumber();
 
 
+
+
 private:
 
 	State* _currentState;

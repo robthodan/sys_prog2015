@@ -8,7 +8,7 @@
 # -o --> name des output-files
 
 makeTestAutomat: InitialTarget NumberTarget IdentifierTarget AutomatTarget TestAutomatTarget  
-	g++ -g objs/Initial.o objs/Number.o objs/Identifier.o objs/Automat.o debug/TestAutomat.o -o debug/AutomatTest
+	g++ -g objs/InitialState.o objs/NumberState.o objs/IdentifierState.o objs/Automat.o debug/TestAutomat.o -o debug/AutomatTest
 	
 
 # compilieren des Files Automat.cpp zu Automat.o, 
@@ -23,13 +23,13 @@ AutomatTarget :  src/Automat.cpp includes/Automat.h
 	g++ -g  -c -Wall src/Automat.cpp -o objs/Automat.o 
 	
 InitialTarget :  src/InitialState.cpp includes/InitialState.h
-	g++ -g  -c -Wall src/Initial.cpp -o objs/Initial.o 
+	g++ -g  -c -Wall src/InitialState.cpp -o objs/InitialState.o 
 	
 NumberTarget : src/NumberState.cpp includes/NumberState.h
-	g++ -g -c -Wall src/Number.cpp -o objs/Number.o
+	g++ -g -c -Wall src/NumberState.cpp -o objs/NumberState.o
 	
 IdentifierTarget : src/IdentifierState.cpp includes/IdentifierState.h
-	g++ -g -c -Wall src/Identifier.cpp -o objs/Identifier.o
+	g++ -g -c -Wall src/IdentifierState.cpp -o objs/IdentifierState.o
 
 
 # TestAutomat.o ist abhängig von src/TestAutomat.cpp und src/Automat.h

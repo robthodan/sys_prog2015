@@ -17,6 +17,7 @@ public:
 	virtual void setStateNumber() = 0;
 	virtual void setStateIdentifier() = 0;
 
+
 };
 
 class State {
