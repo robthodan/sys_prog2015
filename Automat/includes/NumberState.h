@@ -10,9 +10,9 @@
 
 #include "State.h"
 
-class Number: public State {
+class NumberState: public State {
 public:
-	virtual ~Number(){};
+	virtual ~NumberState(){};
 	virtual void read(char,AutomatOO*);
 };
 

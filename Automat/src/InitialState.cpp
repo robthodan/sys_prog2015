@@ -7,9 +7,9 @@
 
 #include <iostream>
 
-#include "../includes/Initial.h"
+#include "../includes/InitialState.h"
 
-void Initial::read(char c, AutomatOO* automat){
+void InitialState::read(char c, AutomatOO* automat){
 
 	if((48 <= c) && (c <= 57)){
 		automat->setStateNumber();

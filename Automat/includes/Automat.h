@@ -11,10 +11,10 @@
 #define Automat_H_
 
 #include "State.h"
-#include "Initial.h"
-#include "Identifier.h"
-#include "Number.h"
-#include "State.h"
+#include "InitialState.h"
+#include "IdentifierState.h"
+#include "NumberState.h"
+
 
 
 class Automat: public AutomatOO {
@@ -31,9 +31,9 @@ private:
 
 	State* _currentState;
 
-	Initial* _initialState;
-	Number* _numberState;
-	Identifier* _identifierState;
+	InitialState* _initialState;
+	NumberState* _numberState;
+	IdentifierState* _identifierState;
 };
 
 #endif /* Automat_H_ */

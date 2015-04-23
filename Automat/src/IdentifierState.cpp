@@ -5,10 +5,10 @@
  *      Author: tom
  */
 
-#include "../includes/Identifier.h"
+#include "../includes/IdentifierState.h"
 #include <iostream>
 
-void Identifier::read(char c, AutomatOO* automat){
+void IdentifierState::read(char c, AutomatOO* automat){
 
 	if(!((65 <= (int)c) && ((int)c <= 90)) && !((0 <= c) && (c <= 9))){
 		std::cout << "identifier" << std::endl;

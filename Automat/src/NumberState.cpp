@@ -5,12 +5,12 @@
  *      Author: tom
  */
 
-#include "../includes/Number.h"
+#include "../includes/NumberState.h"
 
 #include <iostream>
 
 
-void Number::read(char c, AutomatOO* automat){
+void NumberState::read(char c, AutomatOO* automat){
 
 	if(!((48 <= c) && (c <= 57))){
 		std::cout << "Number" << std::endl;

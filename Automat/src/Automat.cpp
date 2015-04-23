@@ -5,16 +5,16 @@
 
 #include "../includes/Automat.h"
 #include "../includes/State.h"
-#include "../includes/Initial.h"
-#include "../includes/Number.h"
-#include "../includes/Identifier.h"
+#include "../includes/InitialState.h"
+#include "../includes/NumberState.h"
+#include "../includes/IdentifierState.h"
 
 
 
 Automat::Automat() {
-	_initialState = new Initial();
-	_numberState = new Number();
-	_identifierState = new Identifier();
+	_initialState = new InitialState();
+	_numberState = new NumberState();
+	_identifierState = new IdentifierState();
 
 	_currentState = _initialState;
 

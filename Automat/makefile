@@ -22,13 +22,13 @@ makeTestAutomat: InitialTarget NumberTarget IdentifierTarget AutomatTarget TestA
 AutomatTarget :  src/Automat.cpp includes/Automat.h 
 	g++ -g  -c -Wall src/Automat.cpp -o objs/Automat.o 
 	
-InitialTarget :  src/Initial.cpp includes/Initial.h
+InitialTarget :  src/InitialState.cpp includes/InitialState.h
 	g++ -g  -c -Wall src/Initial.cpp -o objs/Initial.o 
 	
-NumberTarget : src/Number.cpp includes/Number.h
+NumberTarget : src/NumberState.cpp includes/NumberState.h
 	g++ -g -c -Wall src/Number.cpp -o objs/Number.o
 	
-IdentifierTarget : src/Identifier.cpp includes/Identifier.h
+IdentifierTarget : src/IdentifierState.cpp includes/IdentifierState.h
 	g++ -g -c -Wall src/Identifier.cpp -o objs/Identifier.o
 
 

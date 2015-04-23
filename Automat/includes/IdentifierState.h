@@ -10,9 +10,9 @@
 
 #include "State.h"
 
-class Identifier: public State {
+class IdentifierState: public State {
 public:
-	virtual ~Identifier(){};
+	virtual ~IdentifierState(){};
 	virtual void read(char,AutomatOO*);
 };
 
