@@ -8,6 +8,8 @@
 #ifndef STATE_H_
 #define STATE_H_
 
+#include "../../Token/includes/TokenType.h"
+
 class State;
 
 class AutomatOO {
@@ -16,6 +18,9 @@ public:
 	virtual void setStateInitial() = 0;
 	virtual void setStateNumber() = 0;
 	virtual void setStateIdentifier() = 0;
+
+	virtual void mkToken(TokenType) = 0;
+
 
 
 };

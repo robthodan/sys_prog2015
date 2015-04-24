@@ -41,3 +41,7 @@ void Automat::setStateNumber(){
 void Automat::setStateIdentifier(){
 	this->_currentState = this->_identifierState;
 }
+
+void Automat::mkToken(TokenType){
+
+}

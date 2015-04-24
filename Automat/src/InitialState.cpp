@@ -20,7 +20,7 @@ void InitialState::read(char c, AutomatOO* automat){
 
 	switch(c){
 	case '+': // PLUS
-		std::cout << "=" << std::endl;
+		automat->mkToken(PLUS);
 		break;
 	case '-': // MINUS
 		std::cout << "+" << std::endl;

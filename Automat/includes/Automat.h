@@ -5,7 +5,6 @@
  *      Author: knad0001
  */
 
-/* wooohhooo */
 
 #ifndef Automat_H_
 #define Automat_H_
@@ -25,6 +24,7 @@ public:
 	void setStateInitial();
 	void setStateIdentifier();
 	void setStateNumber();
+	void mkToken(TokenType);
 
 
 
