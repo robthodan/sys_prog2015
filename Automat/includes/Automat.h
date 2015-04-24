@@ -13,26 +13,43 @@
 #include "InitialState.h"
 #include "IdentifierState.h"
 #include "NumberState.h"
+#include "AsignState.h"
+#include "Token_Type.h"
 
+class Automat;
 
+//Nur für Testfälle
+class TestScannerOO {
+public:
+	virtual ~TestScannerOO(){};
+	virtual void mkToken(Token_Type) = 0;
+	virtual void ungetChar(int)=0;
+
+};
 
 class Automat: public AutomatOO {
 public:
-	Automat();
+	Automat(TestScannerOO*);
 	virtual ~Automat();
 	void read(char);
+
 	void setStateInitial();
 	void setStateIdentifier();
 	void setStateNumber();
-	void mkToken(TokenType);
+	void setStateAsign();
 
+	void mkToken(Token_Type);
+	void ungetChar(int);
 
-
+	int getCount();
 
 private:
 
-	State* _currentState;
+	TestScannerOO* scanner;
 
+
+	State* _currentState;
+	AsignState* _asignState;
 	InitialState* _initialState;
 	NumberState* _numberState;
 	IdentifierState* _identifierState;

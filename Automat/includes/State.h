@@ -8,7 +8,7 @@
 #ifndef STATE_H_
 #define STATE_H_
 
-#include "../../Token/includes/TokenType.h"
+#include "Token_Type.h"
 
 class State;
 
@@ -18,10 +18,10 @@ public:
 	virtual void setStateInitial() = 0;
 	virtual void setStateNumber() = 0;
 	virtual void setStateIdentifier() = 0;
+	virtual void setStateAsign() = 0;
 
-	virtual void mkToken(TokenType) = 0;
-
-
+	virtual void mkToken(Token_Type) = 0;
+	virtual void ungetChar(int) = 0;
 
 };
 

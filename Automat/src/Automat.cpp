@@ -9,12 +9,17 @@
 #include "../includes/NumberState.h"
 #include "../includes/IdentifierState.h"
 
+#include <iostream>
 
 
-Automat::Automat() {
+
+Automat::Automat(TestScannerOO* testscanner) {
 	_initialState = new InitialState();
 	_numberState = new NumberState();
 	_identifierState = new IdentifierState();
+	_asignState = new AsignState();
+
+	scanner = testscanner;
 
 	_currentState = _initialState;
 
@@ -42,6 +47,17 @@ void Automat::setStateIdentifier(){
 	this->_currentState = this->_identifierState;
 }
 
-void Automat::mkToken(TokenType){
+void Automat::setStateAsign(){
+	this->_currentState = this->_asignState;
+}
+
+void Automat::mkToken(Token_Type token){
+	this->scanner->mkToken(token);
 
 }
+
+void Automat::ungetChar(int i){
+	this->scanner->ungetChar(i);
+}
+
+

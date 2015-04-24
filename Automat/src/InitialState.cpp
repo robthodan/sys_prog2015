@@ -9,24 +9,21 @@
 
 #include "../includes/InitialState.h"
 
-void InitialState::read(char c, AutomatOO* automat){
 
-	if((48 <= c) && (c <= 57)){
+void InitialState::read(char c, AutomatOO* automat){
+	if(c == '1'){
 		automat->setStateNumber();
-	} else if((65 <= c) && (c <= 90)){
-		automat->setStateIdentifier();
 	}
 
-
 	switch(c){
-	case '+': // PLUS
+	case 43: // PLUS
 		automat->mkToken(PLUS);
 		break;
-	case '-': // MINUS
-		std::cout << "+" << std::endl;
+	case 45: // MINUS
+		automat->mkToken(MINUS);
 		break;
 	case ':': // COLON
-		std::cout << "=" << std::endl;
+		automat->setStateAsign();
 		break;
 	case '*': // STAR
 		std::cout << "+" << std::endl;

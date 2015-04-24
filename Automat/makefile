@@ -7,8 +7,8 @@
 # -g --> debug Informationen erzeugen
 # -o --> name des output-files
 
-makeTestAutomat: InitialTarget NumberTarget IdentifierTarget AutomatTarget TestAutomatTarget  
-	g++ -g objs/InitialState.o objs/NumberState.o objs/IdentifierState.o objs/Automat.o debug/TestAutomat.o -o debug/AutomatTest
+makeTestAutomat: AsignTarget TestScannerTarget InitialTarget NumberTarget IdentifierTarget AutomatTarget TestAutomatTarget  
+	g++ -g objs/AsignState.o objs/TestScanner.o objs/InitialState.o objs/NumberState.o objs/IdentifierState.o objs/Automat.o debug/TestAutomat.o -o debug/AutomatTest
 	
 
 # compilieren des Files Automat.cpp zu Automat.o, 
@@ -30,6 +30,13 @@ NumberTarget : src/NumberState.cpp includes/NumberState.h
 	
 IdentifierTarget : src/IdentifierState.cpp includes/IdentifierState.h
 	g++ -g -c -Wall src/IdentifierState.cpp -o objs/IdentifierState.o
+
+AsignTarget: src/AsignState.cpp includes/AsignState.h
+	g++ -g -c -Wall src/AsignState.cpp -o objs/AsignState.o
+	
+TestScannerTarget : src/TestScanner/TestScanner.cpp includes/TestScanner/TestScanner.h
+	g++ -g -c -Wall src/TestScanner/TestScanner.cpp -o objs/TestScanner.o
+	
 
 
 # TestAutomat.o ist abhängig von src/TestAutomat.cpp und src/Automat.h

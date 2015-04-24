@@ -7,19 +7,16 @@
 
 #include "../includes/NumberState.h"
 
-#include <iostream>
 
 
 void NumberState::read(char c, AutomatOO* automat){
 
 	if(!((48 <= c) && (c <= 57))){
-		std::cout << "Number" << std::endl;
+		automat->mkToken(NUMBER);
 		automat->setStateInitial();
+		automat->ungetChar(1);
 
 	}
-
-
-
 
 }
 
