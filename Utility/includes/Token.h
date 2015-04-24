@@ -55,23 +55,4 @@ private:
 	int column;
 };
 
-class Number : public Token {
-public:
-	Number(char string[], TokenType type);
-	~Number();
-
-	char getString();
-	int getAsInt();
-private:
-	char string[];
-};
-
-class Identifier : public Token {
-public:
-	Identifier(char string[], TokenType type);
-	~Identifier();
-private:
-	char string[];
-};
-
 #endif /* TOKEN_H_ */

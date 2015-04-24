@@ -5,7 +5,7 @@
  *      Author: knad0001
  */
 
-#include "../../Token/includes/Token.h"
+#include "../../Utility/includes/Token.h"
 
 #ifndef SCANNER_H_
 #define SCANNER_H_

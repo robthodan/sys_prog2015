@@ -14,6 +14,10 @@ public:
 	virtual ~Symboltable();
 
 	void initSymbols();
+	void addEntry(char * lexem, TokenType type, int value);
+	Information * getEntry(char * lexem);
+private:
+	SymTabEntry * entries[1000];
 };
 
 #endif /* SYMBOLTABLE_H_ */
