@@ -14,7 +14,7 @@ int main (int argc, char* argv[]){
 
 
 
-	char autoTest[] = { "11111+-11111++++11112 =:=:= 1111:  "};
+	char autoTest[] = { "ab1211 + :* sg *: 43 "};
 
 	while(scanner->count < (sizeof(autoTest)/sizeof(char))){
 		std::cout << autoTest[scanner->count] << " ";

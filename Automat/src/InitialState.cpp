@@ -11,8 +11,10 @@
 
 
 void InitialState::read(char c, AutomatOO* automat){
-	if(c == '1'){
+	if((c >= 48) && (c <= 57)){
 		automat->setStateNumber();
+	} else if((c >= 65) && (c <= 122)){
+		automat->setStateIdentifier();
 	}
 
 	switch(c){

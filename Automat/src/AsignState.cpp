@@ -10,10 +10,13 @@
 
 void AsignState::read(char c, AutomatOO* automat){
 	if(c == '='){
-		automat->mkToken(ASSIGN);
+		automat->mkToken(DEF);
 		automat->setStateInitial();
+	}
+	else if (c == '*') {
+		automat->setStateComment();
 	} else {
-		automat->mkToken(COLON);
+		automat->mkToken(DP);
 		automat->ungetChar(1);
 		automat->setStateInitial();
 	}

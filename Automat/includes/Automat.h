@@ -14,7 +14,9 @@
 #include "IdentifierState.h"
 #include "NumberState.h"
 #include "AsignState.h"
+#include "CommentState.h"
 #include "Token_Type.h"
+
 
 class Automat;
 
@@ -37,6 +39,7 @@ public:
 	void setStateIdentifier();
 	void setStateNumber();
 	void setStateAsign();
+	void setStateComment();
 
 	void mkToken(Token_Type);
 	void ungetChar(int);
@@ -49,6 +52,7 @@ private:
 
 
 	State* _currentState;
+	CommentState* _commentState;
 	AsignState* _asignState;
 	InitialState* _initialState;
 	NumberState* _numberState;

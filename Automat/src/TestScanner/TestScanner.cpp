@@ -24,11 +24,17 @@ void TestScanner::mkToken(Token_Type token){
 		case NUMBER: // MINUS
 			std::cout << "    Token: Number" << std::endl;
 			break;
-		case ASSIGN: // MINUS
+		case DEF: // MINUS
 			std::cout << "    Token: Assign" << std::endl;
 			break;
-		case COLON: // MINUS
+		case DP: // MINUS
 			std::cout << "    Token: Doppelpunkt" << std::endl;
+			break;
+		case COMMENT:
+			std::cout << "comment" << std::endl;
+			break;
+		case IDENTIFIER:
+			std::cout << "    Token: Identifier" << std::endl;
 			break;
 	}
 

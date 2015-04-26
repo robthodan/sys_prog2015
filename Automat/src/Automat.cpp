@@ -18,6 +18,7 @@ Automat::Automat(TestScannerOO* testscanner) {
 	_numberState = new NumberState();
 	_identifierState = new IdentifierState();
 	_asignState = new AsignState();
+	_commentState = new CommentState();
 
 	scanner = testscanner;
 
@@ -51,10 +52,15 @@ void Automat::setStateAsign(){
 	this->_currentState = this->_asignState;
 }
 
+void Automat::setStateComment(){
+	this->_currentState = this->_commentState;
+}
+
 void Automat::mkToken(Token_Type token){
 	this->scanner->mkToken(token);
 
 }
+
 
 void Automat::ungetChar(int i){
 	this->scanner->ungetChar(i);

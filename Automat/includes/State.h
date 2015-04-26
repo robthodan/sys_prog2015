@@ -19,6 +19,7 @@ public:
 	virtual void setStateNumber() = 0;
 	virtual void setStateIdentifier() = 0;
 	virtual void setStateAsign() = 0;
+	virtual void setStateComment () = 0;
 
 	virtual void mkToken(Token_Type) = 0;
 	virtual void ungetChar(int) = 0;

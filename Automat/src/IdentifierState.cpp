@@ -10,9 +10,10 @@
 
 void IdentifierState::read(char c, AutomatOO* automat){
 
-	if(!((65 <= (int)c) && ((int)c <= 90)) && !((0 <= c) && (c <= 9))){
-		std::cout << "identifier" << std::endl;
+	if( !((c >= 48) && (c <= 57)) && !((c >= 65) && (c <= 122)) ){
+		automat->mkToken(IDENTIFIER);
 		automat->setStateInitial();
+		automat->ungetChar(1);
 	}
 
 
