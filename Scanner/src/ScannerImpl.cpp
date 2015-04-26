@@ -1,4 +1,4 @@
-#include "../../Token/includes/Token.h"
+#include "../../Utility/includes/Token.h"
 
 ScannerImpl::ScannerImpl() {
 	Automat* automat = new Automat();

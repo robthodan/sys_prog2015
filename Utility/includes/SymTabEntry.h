@@ -12,8 +12,10 @@
 
 class SymTabEntry {
 public:
-	SymTabEntry();
+	SymTabEntry(char * lexem);
 	~SymTabEntry();
 private:
-
+	Information* linkToInformation;
+	char * lexem;
+	SymTabEntry * next;
 };
