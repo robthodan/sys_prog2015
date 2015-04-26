@@ -63,6 +63,12 @@ void InitialState::read(char c, AutomatOO* automat){
 		case ']': // RSQUARE
 			automat->mkToken(RECK);
 			break;
+		case '\n': // NEW LINE
+			automat->mkToken(RETURN);
+			break;
+		case 4: //TODO: EOF - Welcher char?
+			automat->mkToken(EOF);
+			break;
 		case ' ':
 			break;
 		default:

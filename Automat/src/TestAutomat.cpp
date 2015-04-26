@@ -12,7 +12,7 @@ int main (int argc, char* argv[]){
 	automat = new Automat(scanner);
 
 
-	char autoTest[] = { "<: % hund4252566gtgtg 675675756 ! <: bka <:> :* sg *: 43 "};
+	char autoTest[] = { "<: % \n hund4252566gtgtg 675675756 ! <: bka <:> :* sg *: 43 "};
 
 	while(scanner->count < (sizeof(autoTest)/sizeof(char))){
 		std::cout << autoTest[scanner->count] << " ";

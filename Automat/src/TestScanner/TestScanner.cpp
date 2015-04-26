@@ -59,6 +59,13 @@ void TestScanner::mkToken(Token_Type token){
 			break;
 		case ERROR:
 			std::cout << "     Token ERROR" << std::endl;
+			break;
+		case RETURN:
+			std::cout << "     Token: New LIne" << std::endl;
+			break;
+		case EOF:
+			std::cout << "     Token: EOF" << std::endl;
+			break;
 	}
 
 }
