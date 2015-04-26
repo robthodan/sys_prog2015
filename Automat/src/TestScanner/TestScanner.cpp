@@ -36,6 +36,29 @@ void TestScanner::mkToken(Token_Type token){
 		case IDENTIFIER:
 			std::cout << "    Token: Identifier" << std::endl;
 			break;
+		case EQUAL:
+			std::cout << "     Token: Equal" << std::endl;
+			break;
+		case EXCLAMATIONMARK:
+			std::cout << "     Token: Exclamation" << std::endl;
+			break;
+		case STAR:
+			std::cout << "     Token: Star" << std::endl;
+			break;
+		case LBRACE:
+			std::cout << "     Token: LBRACE" << std::endl;
+			break;
+		case RBRACE:
+			std::cout << "     Token: RBRACE" << std::endl;
+			break;
+		case LESS:
+			std::cout << "     Token: LESS" << std::endl;
+			break;
+		case SPECIAL:
+			std::cout << "     Token: SPECIAL" << std::endl;
+			break;
+		case ERROR:
+			std::cout << "     Token ERROR" << std::endl;
 	}
 
 }

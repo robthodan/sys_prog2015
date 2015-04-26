@@ -15,56 +15,59 @@ void InitialState::read(char c, AutomatOO* automat){
 		automat->setStateNumber();
 	} else if((c >= 65) && (c <= 122)){
 		automat->setStateIdentifier();
-	}
+	} else {
 
-	switch(c){
-	case 43: // PLUS
-		automat->mkToken(PLUS);
-		break;
-	case 45: // MINUS
-		automat->mkToken(MINUS);
-		break;
-	case ':': // COLON
-		automat->setStateAsign();
-		break;
-	case '*': // STAR
-		std::cout << "+" << std::endl;
-		break;
-	case '<': // LESS
-		std::cout << "=" << std::endl;
-		break;
-	case '>': // GREATER
-		std::cout << "+" << std::endl;
-		break;
-	case '=': // EQUAL
-		std::cout << "=" << std::endl;
-		break;
-	case '!': // EXCLAMATIONMARK
-		std::cout << "+" << std::endl;
-		break;
-	case ';': // SEMICOLON
-		std::cout << "=" << std::endl;
-		break;
-	case '(': // LBRACE
-		std::cout << "+" << std::endl;
-		break;
-	case ')': // RBRACE
-		std::cout << "=" << std::endl;
-		break;
-	case '{': // LCURLY
-		std::cout << "+" << std::endl;
-		break;
-	case '}': // RCURLY
-		std::cout << "=" << std::endl;
-		break;
-	case '[': // LSQUARE
-		std::cout << "+" << std::endl;
-		break;
-	case ']': // RSQUARE
-		std::cout << "=" << std::endl;
-		break;
-
-
+		switch(c){
+		case '+': // PLUS
+			automat->mkToken(PLUS);
+			break;
+		case '-': // MINUS
+			automat->mkToken(MINUS);
+			break;
+		case ':': // COLON
+			automat->setStateAsign();
+			break;
+		case '*': // STAR
+			automat->mkToken(STAR);
+			break;
+		case '<': // LESS
+			automat->setStateSpecial();
+			break;
+		case '>': // GREATER
+			automat->mkToken(GREATER);
+			break;
+		case '=': // EQUAL
+			automat->mkToken(EQUAL);
+			break;
+		case '!': // EXCLAMATIONMARK
+			automat->mkToken(EXCLAMATIONMARK);
+			break;
+		case ';': // SEMICOLON
+			automat->mkToken(SEMICOLON);
+			break;
+		case '(': // LBRACE
+			automat->mkToken(LBRACE);
+			break;
+		case ')': // RBRACE
+			automat->mkToken(RBRACE);
+			break;
+		case '{': // LCURLY
+			automat->mkToken(LCURLY);
+			break;
+		case '}': // RCURLY
+			automat->mkToken(RCURLY);
+			break;
+		case '[': // LSQUARE
+			automat->mkToken(LECK);
+			break;
+		case ']': // RSQUARE
+			automat->mkToken(RECK);
+			break;
+		case ' ':
+			break;
+		default:
+			automat->mkToken(ERROR);
+		}
 	}
 
 }

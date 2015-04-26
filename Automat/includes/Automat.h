@@ -15,6 +15,7 @@
 #include "NumberState.h"
 #include "AsignState.h"
 #include "CommentState.h"
+#include "SpecialState.h"
 #include "Token_Type.h"
 
 
@@ -40,6 +41,8 @@ public:
 	void setStateNumber();
 	void setStateAsign();
 	void setStateComment();
+	void setStateSpecial();
+	void setStateSpecial2();
 
 	void mkToken(Token_Type);
 	void ungetChar(int);
@@ -52,6 +55,8 @@ private:
 
 
 	State* _currentState;
+	SpecialState* _specialState;
+	SpecialState2* _specialState2;
 	CommentState* _commentState;
 	AsignState* _asignState;
 	InitialState* _initialState;

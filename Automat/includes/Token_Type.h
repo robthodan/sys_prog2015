@@ -37,7 +37,8 @@ enum Token_Type {
 	BOOLEAN,      	// 'boolean'
 	VOID,         	// 'void'
 	RETURN,       	// 'return'
-	COMMENT
+	COMMENT,
+	SPECIAL
 };
 
 
