@@ -14,6 +14,9 @@ class SymTabEntry {
 public:
 	SymTabEntry(char * lexem);
 	~SymTabEntry();
+
+	SymTabEntry * getNextEntry();
+	void setNextEntry(SymTabEntry nextEntry);
 private:
 	Information* linkToInformation;
 	char * lexem;

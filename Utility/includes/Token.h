@@ -33,7 +33,7 @@ enum class TokenType {
 	DEF,			// ':='
 	LECK,			// '['
 	RECK,			// ']'
-	GAY,			//TODO neue Bezeichnung fuer '<:>'
+	SPECIAL			//TODO neue Bezeichnung fuer '<:>'
 	IF,           	// 'if' / 'IF'
 	WHILE,        	// 'while' / 'WHILE'
 	INT,          	// 'int'
@@ -51,6 +51,7 @@ public:
 	void setType(TokenType type);
 private:
 	TokenType type;
+	Information* information;
 	int line;
 	int column;
 };
