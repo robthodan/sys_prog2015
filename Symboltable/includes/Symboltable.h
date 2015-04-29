@@ -18,7 +18,7 @@ public:
 	virtual ~Symboltable();
 
 	void initSymbols();
-	void addEntry(char * lexem, TokenType type, int value);
+	void addEntry(const char * lexem, TokenType type, int value);
 	Information * getEntry(char * lexem);
 
 	int hash(const char * lexem);

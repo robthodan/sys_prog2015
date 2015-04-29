@@ -20,7 +20,8 @@ OBJS = $(OBJDIR)/Symboltable.o \
 	#$(OBJDIR)/xx1.o \
 	#$(OBJDIR)/xxn.o
 
-
+testSymTab :  src/TestSymboltable.cpp includes/Symboltable.h
+	g++ -std=c++11 -g  -c -Wall src/TestSymboltable.cpp  -o debug/TestSymboltable.o  
 #
 #		Targets zum Bauen des Tests
 #
@@ -45,11 +46,10 @@ OBJS = $(OBJDIR)/Symboltable.o \
 #	g++ -g  -c -Wall  -o $(OBJDIR)/TestSymboltable.o  $(SRCDIR)/TestSymboltable.cpp
 #
 
-
 # Variante mit guten Makefile-Kenntnissen
 
 makeTestSymboltable: SymboltableTarget TestSymboltableTarget
-	g++ -g $(OBJDIR)/*.o $(BINDIRTEST)/TestSymboltable.o  -o $(BINDIRTEST)/SymboltableTest
+	g++ -std=c++11 -g $(OBJDIR)/*.o $(BINDIRTEST)/TestSymboltable.o  -o $(BINDIRTEST)/SymboltableTest
 
 SymboltableTarget: $(OBJS)
 
@@ -59,12 +59,12 @@ SymboltableTarget: $(OBJS)
 # $^ --> rechte Seite vom Doppelpunkt
 
 $(OBJDIR)/%.o :  $(SRCDIR)/%.cpp $(HEADERDIR)/%.h
-	g++ -g  -c -Wall  $<  -o $@
+	g++ -std=c++11 -g  -c -Wall  $<  -o $@
 
 
 
 TestSymboltableTarget: $(SRCDIR)/TestSymboltable.cpp $(HEADERDIR)/Symboltable.h
-	g++ -g  -c -Wall $(SRCDIR)/TestSymboltable.cpp -o $(BINDIRTEST)/TestSymboltable.o  
+	g++ -std=c++11 -g  -c -Wall $(SRCDIR)/TestSymboltable.cpp -o $(BINDIRTEST)/TestSymboltable.o  
 	
 
 

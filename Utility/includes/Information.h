@@ -1,4 +1,6 @@
 #ifndef INFORMATION_H_
+#include "TokenType.h"
+
 #define INFORMATION_H_
 
 class Information {
